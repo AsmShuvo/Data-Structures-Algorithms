@@ -2,14 +2,6 @@
 
 The **Bellman-Ford** algorithm is used to find the shortest paths from a single source vertex to all other vertices in a graph. It can handle graphs with **negative weight edges** and also detect **negative weight cycles**.
 
-## Key Concepts:
-
-1. **Relaxation**: 
-   - In the Bellman-Ford algorithm, relaxation happens for all edges up to **N-1 times**, where N is the number of vertices in the graph.
-
-2. **Negative Cycle Detection**:
-   - After **N-1 iterations**, if any edge can still be relaxed, it indicates the presence of a **negative weight cycle** in the graph.
-
 ### Why N-1???
 ## Example Explanation:
 for example: 
@@ -19,12 +11,6 @@ u-v :
 - 1-2 --> update on 2nd itr
 - 0-1 --> update on 1st itr
 so we'll need maximum N-1 itr for relaxarion at the worst case.
-
-### Negative Cycle Detection:
-
-After **N-1 iterations** , if any edge can still be relaxed, it means the graph contains a **negative weight cycle**. 
-
-- **If after the 4th iteration, any edge can still be relaxed**, it indicates a negative weight cycle in the graph.
 
 ## Summary of Bellman-Ford Algorithm:
 
