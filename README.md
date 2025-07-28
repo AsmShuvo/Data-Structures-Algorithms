@@ -35,4 +35,13 @@ After **N-1 iterations** , if any edge can still be relaxed, it means the graph 
 ### **Cycle Detection**:
 After the **4th iteration**, if any edge still gets relaxed, it confirms the presence of a negative cycle in the graph.
 
-## **Dijkstra** fails with negative weights.
+# **Dijkstra**:
+- Fails with negative weights.
+- Finds single-source shortest paths in graphs with non-negative weights.
+- Time Complexity: O((V + E) log V) with a priority queue, where V is the number of vertices and E is the number of edges.
+
+# **Floyd-Warshall**:
+- Computes **multi-source all-pairs shortest paths**, finding the shortest distances between every pair of vertices.
+- Can handle **negative weight edges** and detect **negative weight cycles** (if any diagonal element `dist[i][i]` is negative after computation).
+- Nodes are typically 1-based (1 to n) in implementations.
+- Time Complexity: O(V³), where V is the number of vertices.
