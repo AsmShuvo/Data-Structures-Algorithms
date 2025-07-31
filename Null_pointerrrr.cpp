@@ -29,31 +29,13 @@ using namespace std;
     ios_base::sync_with_stdio(false); \
     cin.tie(nullptr)
 
-const int N = 2e5 + 5;
-vii par(N, -1), sz(N, 0);
-int n;
-int init(int v)
-{
-    par[v] = v;
-    sz[v] = 1;
+void solve() {
+    
 }
 
-int find(int v)
+int32_t main()
 {
-    if (par[v] == v)
-        return v;
-    return par[v] = find(par[v]);
-}
-
-void unite(int a, int b)
-{
-    a = find(a);
-    b = find(b);
-    if (a != b)
-    {
-        if (sz[a] < sz[b])
-            swap(a, b);
-        par[b] = a;
-        sz[a] += sz[b];
-    }
+    fastio();
+    w(t)
+        solve();
 }

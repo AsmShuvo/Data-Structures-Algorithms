@@ -12,7 +12,7 @@ u-v :
 - 0-1 --> update on 1st itr
 so we'll need maximum N-1 itr for relaxarion at the worst case.
 
-## Summary of Bellman-Ford Algorithm:
+## Summary
 
 - **Maximum N-1 Iterations**: The algorithm relaxes all edges **N-1 times** where N is the number of vertices.
 - **Cycle Check**: After **N iterations**, if any relaxation happens, it indicates a **negative weight cycle**.
@@ -31,3 +31,9 @@ After the **4th iteration**, if any edge still gets relaxed, it confirms the pre
 - Can handle **negative weight edges** and detect **negative weight cycles** (if any diagonal element `dist[i][i]` is negative after computation).
 - Nodes are typically 1-based (1 to n) in implementations.
 - Time Complexity: O(V³), where V is the number of vertices.
+
+## Cycle Detection algorithms:
+- DFS: for both directed and undirected graphs
+- DSU: for undirected graphs
+- Topsort:  directed graphs (if topological sort is not possible)
+- Floyd-warshal: Detects negative weight cycles in directed graphs (also applicable for undirected but we have to covert it to directed).

@@ -16,6 +16,7 @@ void dijkstra(int src)
 
     priority_queue<pair<long long, int>, vector<pair<long long, int>>, greater<pair<long long, int>>> pq;
     pq.push({0, src});
+    vis[src]=true;  
 
     while (!pq.empty())
     {
